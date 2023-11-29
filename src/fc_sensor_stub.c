@@ -1,5 +1,5 @@
 
-#include "fc_sensor.h"
+#include "../inc/fc_sensor.h"
 
 int fc_sensor_get_time_offset(void) {
     return 0;
