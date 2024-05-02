@@ -31,6 +31,8 @@ int fc_sensor_unsubscribe(const char *topic);
 int fc_sensor_send_data(const char *topic,
 			const uint8_t *data,
 			uint32_t length_in_bytes);
+void fc_sensor_kill_slpi(void);
+
 #ifdef __cplusplus
 }
 #endif
