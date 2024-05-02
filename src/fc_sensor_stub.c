@@ -37,3 +37,8 @@ int fc_sensor_send_data(const char *topic,
 {
 	return 0;
 }
+
+void fc_sensor_kill_slpi(void)
+{
+	return;
+}
