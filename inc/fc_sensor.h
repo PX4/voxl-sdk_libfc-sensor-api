@@ -8,7 +8,6 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
-// Flight controller specific interface (legacy)
 typedef void (*fc_receive_cb)(const char *topic,
 			      const uint8_t *data,
 			      uint32_t length_in_bytes);
@@ -33,15 +32,6 @@ int fc_sensor_send_data(const char *topic,
 			const uint8_t *data,
 			uint32_t length_in_bytes);
 void fc_sensor_kill_slpi(void);
-
-// SLPI link generic interface (recommended for new designs)
-
-typedef void (*slpi_link_cb)(const uint8_t *data, uint32_t length_in_bytes);
-
-int slpi_link_init(bool enable_debug_messages, slpi_link_cb callback, const char *library_name);
-int slpi_link_get_time_offset(void);
-int slpi_link_send(const uint8_t *data, uint32_t length_in_bytes);
-void slpi_link_reset(void);
 
 #ifdef __cplusplus
 }
